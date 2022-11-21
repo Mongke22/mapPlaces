@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AllPlacesOnMapActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.yandex.mapkit.mapview.MapView
+            android:id="@+id/mvAllPlacesYandexMap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.yandex.mapkit.mapview.MapView>
+        <ImageView
+            android:id="@+id/ivTiltAllPlacesOnMap"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center|end"
+            android:layout_margin="20dp"
+            android:src="@drawable/ic_compass_32dp"
+            />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

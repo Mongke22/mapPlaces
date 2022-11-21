@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">mapPlaces</string>
+    <string name="edit_text_hint_title">Название</string>
+    <string name="edit_text_hint_description">Описание</string>
+    <string name="edit_text_hint_date">Дата</string>
+    <string name="edit_text_hint_location">Локация</string>
+    <string name="text_add_image">Добавить картинку</string>
+    <string name="btn_text_save">Сохранить</string>
+    <string name="note_text_no_places_found_yet">Добавьте новые места</string>
+    <string name="image_content_description">Картинка</string>
+</resources>
