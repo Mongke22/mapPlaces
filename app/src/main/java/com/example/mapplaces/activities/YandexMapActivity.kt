@@ -180,7 +180,7 @@ class YandexMapActivity : AppCompatActivity(),Session.SearchListener, CameraList
             InputMethodManager.HIDE_NOT_ALWAYS
         )
     }
-
+//
     override fun onStop() {
         mvYandex.onStop()
         MapKitFactory.getInstance().onStop()
