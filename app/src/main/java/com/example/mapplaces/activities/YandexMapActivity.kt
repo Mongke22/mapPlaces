@@ -164,6 +164,7 @@ class YandexMapActivity : AppCompatActivity(),Session.SearchListener, CameraList
             }
             if(response.meta.code == 404){
                 etYandex.setText("lat:${String.format("%.3f", point.latitude)} lon:${String.format("%.3f", point.longitude)}")
+                resultAddress = etYandex.text.toString()
             }else {
                 resultAddress = response.result.items[0].full_name
                 etYandex.setText(resultAddress)
