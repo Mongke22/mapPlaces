@@ -87,7 +87,6 @@ class YandexMapActivity : AppCompatActivity(),Session.SearchListener, CameraList
             etYandex.isCursorVisible = false
         }
         fabChoosePlace.setOnClickListener{
-            Constants.showCustomProgressDialog(this@YandexMapActivity)
             currentCameraPosition = mvYandex.map.cameraPosition.target
             val mapObjects: MapObjectCollection = mvYandex.getMap().getMapObjects()
             mapObjects.clear()
@@ -95,13 +94,14 @@ class YandexMapActivity : AppCompatActivity(),Session.SearchListener, CameraList
                 currentCameraPosition,
                 ImageProvider.fromResource(this, R.drawable.place_mark)
             ))
-            if(Constants.isNetWorkAvailable(this@YandexMapActivity)) {
+            etYandex.setText("lat:${String.format("%.3f", currentCameraPosition.latitude)} lon:${String.format("%.3f", currentCameraPosition.longitude)}")
+            /*if(Constants.isNetWorkAvailable(this@YandexMapActivity)) {
                 setAddressByPoint(currentCameraPosition)
             }
             else{
                 Constants.hideProgressDialog()
                 Constants.makeToast("Отсутствует интернет соединение", this@YandexMapActivity)
-            }
+            }*/
             resultPoint.lat = currentCameraPosition.latitude
             resultPoint.lon = currentCameraPosition.longitude
         }

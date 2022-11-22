@@ -341,7 +341,8 @@ class AddPlaceActivity : AppCompatActivity(), View.OnClickListener {
             val mLastLocation: Location = result!!.lastLocation!!
             mLatitude = mLastLocation.latitude
             mLongitude = mLastLocation.longitude
-            setAddressFromLonLat(mLatitude, mLongitude)
+            //setAddressFromLonLat(mLatitude, mLongitude)
+            et_location.setText("lat:${String.format("%.3f", mLatitude)} lon:${String.format("%.3f", mLongitude)}")
 
         }
     }
