@@ -15,10 +15,10 @@
         </com.yandex.mapkit.mapview.MapView>
         <ImageView
             android:id="@+id/ivTiltAllPlacesOnMap"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="@dimen/tilt_width_height"
+            android:layout_height="@dimen/tilt_width_height"
             android:layout_gravity="center|end"
-            android:layout_margin="20dp"
+            android:layout_margin="@dimen/tilt_margin"
             android:src="@drawable/ic_compass_32dp"
             />
     </FrameLayout>

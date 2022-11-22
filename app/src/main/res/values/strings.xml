@@ -19,4 +19,5 @@
     <string name="btn_submit_text">Submit</string>
     <string name="btn_text_view_on_map">View on map</string>
     <string name="bubble_text">Test</string>
+    <string name="et_yandex_search">Поиск</string>
 </resources>

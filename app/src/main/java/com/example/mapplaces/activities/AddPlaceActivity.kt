@@ -193,8 +193,8 @@ class AddPlaceActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.tvSelectCurrentLocation -> {
                 if(!isLocationEnabled()){
-                    Constants.makeToast("Location locked", this@AddPlaceActivity)
-                    showRationalDialogForLocation()
+                    Constants.makeToast("Включите геолокацию", this@AddPlaceActivity)
+                    showRationalDialogForPermissions()
                 }else{
                     Dexter.withContext(this@AddPlaceActivity).withPermissions(
                         Manifest.permission.ACCESS_FINE_LOCATION,
@@ -267,12 +267,9 @@ class AddPlaceActivity : AppCompatActivity(), View.OnClickListener {
                 saveImageToInternalStorage =  saveImageToInternalStorage(thumbNail)
                 Log.i("Camera img", "Path: $saveImageToInternalStorage")
             } else if(requestCode == PLACE_AUTOCOMPLETE_REQUEST_CODE){
-
                 mLatitude = Constants.RESULT_POINT.lat
                 mLongitude = Constants.RESULT_POINT.lon
                 et_location.setText(Constants.ADDRESS_DATA)
-                //et_title.setText(mLongitude.toString())
-                //et_title.setText(mLatitude.toString())
             }
         }
     }
@@ -283,7 +280,7 @@ class AddPlaceActivity : AppCompatActivity(), View.OnClickListener {
         ).withListener(object: MultiplePermissionsListener {
             override fun  onPermissionsChecked(report: MultiplePermissionsReport?) {
                 if(report!!.areAllPermissionsGranted()){
-                    val galleryIntent: Intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+                    val galleryIntent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
                     startActivityForResult(galleryIntent, GALLERY)
                 }
             }
@@ -305,9 +302,6 @@ class AddPlaceActivity : AppCompatActivity(), View.OnClickListener {
             dialog, _ ->
             dialog.dismiss()
         }.show()
-    }
-    private fun showRationalDialogForLocation(){
-
     }
 
     private fun updateDateView(){

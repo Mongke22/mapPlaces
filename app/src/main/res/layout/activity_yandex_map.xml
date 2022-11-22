@@ -15,8 +15,8 @@
         </com.yandex.mapkit.mapview.MapView>
         <ImageView
             android:id="@+id/ivMarkInTheCenter"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="@dimen/icon_small_size"
+            android:layout_height="@dimen/icon_small_size"
             android:background="@drawable/place_mark"
             android:layout_gravity="center"
             />
@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|start"
-            android:layout_margin="25dp"
+            android:layout_margin="@dimen/fab_map_margin"
             app:backgroundTint="@color/colorLight"
             app:srcCompat="@drawable/ic_add_location_24"
             app:tint="@color/white" />
@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
-            android:layout_margin="25dp"
+            android:layout_margin="@dimen/fab_map_margin"
             app:backgroundTint="@color/colorLight"
             app:srcCompat="@drawable/ic_action_submit_24"
             app:tint="@color/white" />
@@ -42,13 +42,13 @@
             android:id="@+id/etYandex"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="@dimen/et_yandex_margin"
+            android:layout_marginEnd="@dimen/et_yandex_margin"
+            android:layout_marginTop="@dimen/et_yandex_margin"
             android:padding="10dp"
             android:imeOptions="actionSearch"
             android:inputType="text"
-            android:hint="   Поиск"
+            android:hint="@string/et_yandex_search"
             android:gravity="start"
             android:background="@drawable/search_edit_text"
             android:alpha="0.5"
@@ -58,18 +58,18 @@
         </EditText>
         <ImageView
             android:id="@+id/ivSearch"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="@dimen/icon_small_size"
+            android:layout_height="@dimen/icon_small_size"
             android:layout_gravity="top|end"
-            android:layout_margin="20dp"
+            android:layout_margin="@dimen/iv_map_margin"
             android:src="@drawable/ic_item_search_24"
             />
         <ImageView
             android:id="@+id/ivTilt"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="@dimen/tilt_width_height"
+            android:layout_height="@dimen/tilt_width_height"
             android:layout_gravity="center|end"
-            android:layout_margin="20dp"
+            android:layout_margin="@dimen/iv_map_margin"
             android:src="@drawable/ic_compass_32dp"
             />
     </FrameLayout>
